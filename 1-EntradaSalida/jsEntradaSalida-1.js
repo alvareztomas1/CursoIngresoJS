@@ -1,6 +1,17 @@
 //Debemos lograr mostrar un mensaje al presionar el botón  'mostrar'.
 function mostrar()
-{
-	alert("ok");
+{ 
+	//esto es un comentario
+	/*
+	esto es un comentario
+	de
+	varias
+	lineas
+	*/
+	alert ("hola");
+	
+
+	
+
 }
 

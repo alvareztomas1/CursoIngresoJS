@@ -8,7 +8,7 @@ function mostrar()
 	varias
 	lineas
 	*/
-	alert ("hola");
+	alert ("hoxzdla");
 	
 
 	

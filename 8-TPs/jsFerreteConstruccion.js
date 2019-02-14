@@ -14,5 +14,19 @@ function Circulo ()
 }
 function Materiales () 
 {
+    
+    largo = document.getElementById("Largo").value;
+    largo= parseInt (largo);
+    ancho = document.getElementById("Ancho").value;
+    ancho = parseInt (ancho);
+    cemento = (largo*ancho)*2;
+    cal = ((cemento*3)/2);
+    alert ("necesitas " + cemento + " bolsas de cemento " + " y " + cal + " bolsas de cal");
+
+
+
+    alert ("necesitas " + largo1 + " bolsas de cemento " + " y " + ancho1 + " bolsas de cal ")
+
+
 	
 }

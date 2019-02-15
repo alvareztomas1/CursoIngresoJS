@@ -1,8 +1,6 @@
 function mostrar()
 {
-    var dato;
-
-    var dato1;
+    var dato,dato1;
 
     dato = document.getElementById ("elNombre").value;
 

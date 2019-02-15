@@ -1,7 +1,7 @@
 function mostrar()
 {
 	var dato;
-	dato = Math.random()*10;
+	dato = Math.random()*10+1;
 	dato = parseInt(dato);
 	alert (dato);
 

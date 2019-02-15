@@ -1,7 +1,7 @@
 function mostrar()
 {
 	var dato;
-	dato = Math.random(0,1)*10;
+	dato = Math.random(0,1)*10+1;
 	dato = parseInt(dato);
 	alert ("su nota es " + dato);
 	if (dato==10 || dato==9)

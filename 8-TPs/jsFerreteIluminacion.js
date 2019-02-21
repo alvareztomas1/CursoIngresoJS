@@ -8,26 +8,72 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio() {
-    var cantidad, marca, descuento, descuento1, descuento2;
+function CalcularPrecio() 
+{
+    var cantidad;
+    var marca; 
+    var precioLampara;
+    var desc; 
+    
     cantidad = document.getElementById("Cantidad").value;
     cantidad = parseInt(cantidad);
     marca = document.getElementById("Marca").value;
-    descuento = document.getElementById("precioDescuento").value;
-    descuento = (35 * cantidad)
+    precioLampara = 35;
+    precioTotal = 35*cantidad;
 
-    if (cantidad >= 6) {
-        descuento1 = (descuento - (descuento * 50) / 100);
-        document.getElementById("precioDescuento").value = descuento1;
-    }
-    if (cantidad == 5 && marca == "ArgentinaLuz") {
-        descuento2 = (descuento - (descuento * 40) / 100)
-        document.getElementById("precioDescuento").value = descuento2;
-    }
-    else {
-        descuento3 = (descuento - (descuento * 30) / 100)
-        document.getElementById("precioDescuento").value = descuento3;
-    }
+    if (cantidad=>6)
+    {
+      desc= 0.50
+    }else
+    {
+        if (cantidad==5)
+        {
+            if (marca=="ArgentinaLuz")
+            {
+                desc=0.40
+            }else
+            {
+                desc=0.30
+            }
+        
+        }else
+        {
+            if (cantidad==4)
+            {
+                if (marca=="ArgentinaLuz" || "FelipeLamparas")
+                {
+                    desc=0.30
+                }else
+                {
+                    desc=0.25
+                }
+            }else
+            {
+                if (cantidad==3)
+                {
+                    if (marca=="ArgentinaLuz")
+                    {
+                        desc=0.15
+                    }
+                    else
+                    {
+                        if (marca=="FelipeLamparas")
+                        {
+                            desc=0.10
+                        }
+                        else
+                        {
+                            desc=0.5
+                        }
+                    }
+                }//if (cantidad==3)
+            }//(cantidad==4)
+        } //if (cantidad==5)  
+    }//if (cantidad=>6)
+
+    precioFinal = precioTotal*desc;
+    document.getElementById("precioDescuento").value = precioFinal;
+
 
 
 

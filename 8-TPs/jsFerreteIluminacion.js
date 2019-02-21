@@ -8,37 +8,30 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio () 
-{
-     var cantidad,marca,descuento,descuento1,descuento2;
-     cantidad = document.getElementById("Cantidad").value;
-     cantidad = parseInt (cantidad);
-     marca = document.getElementById("Marca").value;
-     descuento = document.getElementById("precioDescuento").value;
-     descuento = (35*cantidad)
-     
-     
-     if (cantidad>=6)
-     {   
-         descuento1 = (descuento - (descuento*50)/100);
-         document.getElementById("precioDescuento").value = descuento1;
-     }
-     
-     
-    if (cantidad==5&&marca=="ArgentinaLuz")
-    {
-         descuento2 = (descuento-(descuento*40)/100)
-         document.getElementById("precioDescuento").value = descuento2;
+function CalcularPrecio() {
+    var cantidad, marca, descuento, descuento1, descuento2;
+    cantidad = document.getElementById("Cantidad").value;
+    cantidad = parseInt(cantidad);
+    marca = document.getElementById("Marca").value;
+    descuento = document.getElementById("precioDescuento").value;
+    descuento = (35 * cantidad)
+
+    if (cantidad >= 6) {
+        descuento1 = (descuento - (descuento * 50) / 100);
+        document.getElementById("precioDescuento").value = descuento1;
     }
-    else
-    {
-        descuento3 = (descuento-(descuento*30)/100)
+    if (cantidad == 5 && marca == "ArgentinaLuz") {
+        descuento2 = (descuento - (descuento * 40) / 100)
+        document.getElementById("precioDescuento").value = descuento2;
+    }
+    else {
+        descuento3 = (descuento - (descuento * 30) / 100)
         document.getElementById("precioDescuento").value = descuento3;
     }
-     
-     
 
 
 
-     
+
+
+
 }

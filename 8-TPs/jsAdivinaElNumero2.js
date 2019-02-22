@@ -70,11 +70,11 @@ function verificar()
 	{
 		if (numeroIngresado>numeroSecreto)
 		{
-			alert ("se paso");
+			alerta = ("se paso");
 		}
 		else
 		{
-			alert ("le falta");
+			alerta = ("le falta");
 		}
 	}
 	alert(alerta)

@@ -2,3 +2,8 @@
 [0216/192442.978:ERROR:persistent_memory_allocator.cc(777)] Corruption detected in shared-memory segment.
 [0220/193053.367:ERROR:persistent_memory_allocator.cc(777)] Corruption detected in shared-memory segment.
 [0221/183929.506:ERROR:persistent_memory_allocator.cc(777)] Corruption detected in shared-memory segment.
+[0224/170431.688:ERROR:persistent_memory_allocator.cc(777)] Corruption detected in shared-memory segment.
+[0224/172212.814:ERROR:settings.cc(266)] Settings version is not 1
+[0225/191359.087:ERROR:persistent_memory_allocator.cc(777)] Corruption detected in shared-memory segment.
+[0225/193640.438:ERROR:settings.cc(266)] Settings version is not 1
+[0225/195247.830:ERROR:settings.cc(266)] Settings version is not 1

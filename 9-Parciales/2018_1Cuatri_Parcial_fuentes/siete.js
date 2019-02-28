@@ -1,39 +1,42 @@
 function mostrar()
 {
-    var nota;
-    nota = prompt ("ingrese su nota");
-    nota = parseInt (nota)
-    switch (nota)
-    {
-        case 0:
-        case 1:
-        case 2:
-        case 3:
-            alerta = ("la proxima se puede");
-            break;
-        case 4:
-        case 5:
-        case 6:
-            alerta = ("raspando");
-        if (nota<5)
-        {
-            alert ("debe preocuparse mas")
-        }
-            break;
-        case 7:
-        case 8:
-        case 9:
-        case 10:
-            alerta = ("aprobo");
-        if (nota>8)
-        {
-            alert ("muy bien");
-        }
-            break;
-        default:
-        alerta = ("eso no es una nota");
+   var nota;
+   var sexo;
+   var contador;
+   var sumaNotas;
+   var notaMaxima;
+
+   contador=0;
+   sumaNotas= 0;
+   notaMinima=9999;
+   
+
+   while (contador<5)
+   {   
+
+       nota = prompt ("ingrese su nota y su sexo");
+       nota=parseInt(nota);
+       sexo=prompt ("ingrese m o f segun su sexo");
+
+       if (nota>0 && nota<=10)
+       {
+        sumaNotas = (sumaNotas+nota);
         
-        
-    }
-    alert (alerta);
+       }
+       if (nota<notaMinima)
+       {
+           notaMinima=nota
+           
+       }
+       if (sexo=="m" && nota>=6)       
+       {
+        contador2=contador+1;
+       }
+
+       contador++;
+   }
+   alert ("el promedio es "+sumaNotas/contador)
+   alert ("la nota minima es "+notaMinima+" y su sexo es "+sexo);
+   alert ("hubo "+contador2+" varones con mas de 6")
+    
 }

@@ -1,42 +1,58 @@
 function mostrar()
 {
-    var nota;
-    var sexo;
-    var edad;
+    var velocidad;
+    var combustible;
     var contador;
-    var notaMinima;
-    var sexoDeLaNota;
+    var promedio;
+    var sumaVelocidad;
+    var velocidadBaja;
+    var contadorVelocidad;
+
 
     contador=0;
-    notaMinima=0;
-    sexoDeLaNota=0;
-    promedio=0;
-    sumaNotas=0
+    sumaVelocidad=0;
+    velocidadBaja=0;
+    contadorVelocidad=0;
+    velocidadAlta=0;
+    
+
 
     while (contador<5)
     {
-        nota = prompt ("ingrese su nota");
-        nota = parseInt (nota);
-        if (nota<0 || nota>10)
+        velocidad = prompt ("ingrese la velocidad entre 0 y 250");
+        velocidad = parseInt (velocidad);
+        
+        if (velocidad<0 || velocidad>250)
         {
-            alert ("la nota tiene que ser entre 0 y 10");
+            alert ("las velocidades tienen que ser entre 0 y 250");
+        }
+        combustible = prompt ("ingrese l o s segun el tipo de combustible");
+        if (combustible != "l" && combustible != "s")
+        {
+            alert ("el combustible tiene que ser s o l");
+        }
+        if (velocidad<=velocidadBaja || contador==0)
+        {
+            velocidadBaja=velocidad;
+            combustibleBajo=combustible;
+        }
+        if (combustible=="l" && velocidad>100)
+        {
+            contadorVelocidad++;
+        }
+        if (velocidad>=velocidadAlta && combustible=="s" || contador==0)
+        {
+            velocidadAlta=velocidad;
         }
 
-        sexo=prompt("ingrese m o f segun su sexo")
-        if (sexo!="m" && sexo!="f")
-        {
-            alert ("sexo masculino m y femenino f. reingrese")
-        }
-        if (nota<=notaMinima || contador==0)
-        {
-            notaMinima=nota;
-            sexoDeLaNota=sexo;
-        }
 
-        sumaNotas= (nota+sumaNotas)
+        sumaVelocidad= (sumaVelocidad+velocidad);
         contador++;
-    } 
-    promedio = (sumaNotas/contador);
-    alert ("el promedio de las notas es "+promedio);
-    alert ("la nota mas baja es "+notaMinima+" y el sexo es "+sexoDeLaNota);
+    }
+    promedio=(sumaVelocidad/5)
+    
+    alert ("el promedio de velocidades es "+promedio);
+    alert ("la velocidad mas baja fue "+velocidadBaja+" y su tipo de combustible fue "+combustibleBajo);
+    alert ("hubo "+contadorVelocidad+" combustibles liquidos que superaron los 100 km");
+    alert ("la velocidad mas alta de combustible solido es "+velocidadAlta);
 }

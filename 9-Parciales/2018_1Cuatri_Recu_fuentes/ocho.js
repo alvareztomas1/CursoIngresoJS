@@ -40,24 +40,22 @@ function mostrar()
         {
             contadorMayor100++;
         }
+  //--------------------------------------------------        
         if (superficie>100 && primerPais == "")
         {
             primerPais=pais;
-        }
-        
+        }   
  //--------------------------------------------------       
         if (superficie<superficieBaja || contador==0)
         {
             superficieBaja=superficie;
             paisBajo=pais;
         }
-
-        
-        
-
+ //--------------------------------------------------         
         sumaSuperficie= (sumaSuperficie+superficie);
         contador++;
         respuesta=prompt("ingrese no para salir");
+ //--------------------------------------------------         
     }
     promedio = (sumaSuperficie/contador);
     alert ("hubo "+cantidadImpar+" de superficies impares");

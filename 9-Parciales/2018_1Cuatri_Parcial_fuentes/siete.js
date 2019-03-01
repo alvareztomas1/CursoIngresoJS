@@ -4,39 +4,42 @@ function mostrar()
    var sexo;
    var contador;
    var sumaNotas;
-   var notaMaxima;
+   var promedio;
+   var sexoDeLaNota;
 
    contador=0;
    sumaNotas= 0;
-   notaMinima=9999;
+   notaMinima=0;
    
 
    while (contador<5)
    {   
 
-       nota = prompt ("ingrese su nota y su sexo");
+       nota = prompt ("ingrese su nota");
        nota=parseInt(nota);
-       sexo=prompt ("ingrese m o f segun su sexo");
 
-       if (nota>0 && nota<=10)
+       if (nota<0 || nota>10)
        {
-        sumaNotas = (sumaNotas+nota);
+        alert ("la nota tiene que ser entre 0 y 10");
         
        }
-       if (nota<notaMinima)
-       {
-           notaMinima=nota
-           
-       }
-       if (sexo=="m" && nota>=6)       
-       {
-        contador2=contador+1;
-       }
 
+       sexo = prompt ("ingrese m o f segun su sexo");
+       if (sexo != "m" && sexo != "f")
+       {
+           alert ("el sexu debe ser m para masculino y f para femenino. reingrese")
+       }
+       if (nota<=notaMinima || contador==0)
+       {
+           notaMinima=nota;
+           sexoDeLaNota=sexo;
+       }
+       sumaNotas = (sumaNotas + nota);
        contador++;
+
    }
-   alert ("el promedio es "+sumaNotas/contador)
-   alert ("la nota minima es "+notaMinima+" y su sexo es "+sexo);
-   alert ("hubo "+contador2+" varones con mas de 6")
+   promedio = (sumaNotas/contador);
+   alert ("el promedio de los alumnos es "+ promedio;
+   alert ("la nota mas baja de los alumnos es "+notaMinima+ " y su sexo es "+sexoDeLaNota);
     
 }

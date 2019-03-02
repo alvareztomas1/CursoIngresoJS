@@ -13,6 +13,8 @@ function mostrar()
     var sumaNegativos;
     var numeroMinimo;
     var letraMinima;
+    var numeroMaximo;
+    var letraMaxima;
 //--------------------------------------------------------------------------------
     numero=0;
     contador=0;
@@ -23,6 +25,7 @@ function mostrar()
     contadorPositivos=0;
     sumaNegativos=0;
     numeroMinimo=0;
+    numeroMaximo=0;
     
 //--------------------------------------------------------------------------------
     while (respuesta!="no")
@@ -67,9 +70,14 @@ function mostrar()
         numeroMinimo=numero;
         letraMinima=letra;
     }
+    if (numero>numeroMaximo|| contador==0)
+    {
+        numeroMaximo=numero;
+        letraMaxima=letra;
+    }
+//--------------------------------------------------------------------------------
 
-
-
+    contador++;
     respuesta = prompt ("ingrese no para continuar");
     }
 //--------------------------------------------------------------------------------
@@ -79,7 +87,7 @@ function mostrar()
     alert ("se ingresaron "+contadorCero+" ceros");
     alert ("el promedio de los numeros positivos es "+promedioPositivos);
     alert ("la suma de los numeros negativos es "+sumaNegativos);
-
+    alert ("el numero minimo fue "+numeroMaximo+" y su letra fue "+letraMaxima);
     alert ("el numero minimo fue "+numeroMinimo+" y su letra fue "+letraMinima);
 
 }

@@ -1,12 +1,22 @@
 function mostrar()
 {
-    var dato,dato1;
+    var nombre;
+    var localidad;
+    
+    nombre=document.getElementById("elNombre").value;
+    localidad=document.getElementById("laLocalidad").value;
 
-    dato = document.getElementById ("elNombre").value;
-
-    dato1 = document.getElementById ("laLocalidad").value;
-
-    alert ("usted es " + dato + " y vive en la localidad de " + dato1);
+    alert ("usted es "+nombre+" y vive en la localidad de "+localidad);
 
   
 }
+
+
+
+
+
+
+
+
+
+

@@ -8,13 +8,18 @@ var eleccionMaquina;
 
 function comenzar()
 {
-	
+    var numero;
+    var numeroIngresado;
 
+    
+    numero = Math.floor((Math.random() * 3) + 1);
+    console.log (numero);
+    numeroIngresado = prompt ("Ingrese 1(piedra) 2(papel) o 3(tijera)")
 
 }//FIN DE LA FUNCIÓN
 function piedra()
 {
-	
+   onclick("piedra")
 
 }//FIN DE LA FUNCIÓN
 function papel()

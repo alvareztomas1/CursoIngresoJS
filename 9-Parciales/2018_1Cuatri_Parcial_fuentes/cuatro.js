@@ -1,36 +1,39 @@
 function mostrar()
 {
-    var valor1;
-    var valor2;
-    valor1 = prompt ("ingrese el primer valor");
-    valor1 = parseInt (valor1);
-    valor2 = prompt ("ingrese el segundo valor");
-    valor2 = parseInt (valor2);
+    var dato1;
+    var dato2;
+    var alerta;
+    var resta;
 
-    if (valor1==valor2)
+    dato1 = prompt ("ingrese el primer numero");
+    dato1 = parseInt (dato1);
+
+    dato2 = prompt ("ingrese el segundo numero");
+    dato2 = parseInt (dato2);
+
+    resta=(dato1-dato2);
+    suma=(dato1+dato2);
+
+    if (dato1==dato2)
     {
-        alerta = ("los valores ingresados son "+valor1+" y "+valor2);
+        alerta = ("los numeros son "+dato1+" y "+dato2);
     }
     else
     {
-        if (valor1>valor2)
+        if (dato1>dato2)
         {
-            resultado = (valor1-valor2);
-            alerta = ("la resta es "+resultado);
+            alerta = ("la resta es "+resta);
         }
         else
         {
-            if (valor2>valor1)
-            {
-                resultado2 = (valor2+valor1);
-                alerta = ("la suma es "+resultado2);
-            }
-                if (resultado2>10)
-                {
-                    alerta = ("la suma es "+resultado2+" y "+"supero el 10");
-                }
-        }    
+            alerta = ("la suma es "+suma);
+        }
+        if (suma>10)
+        {
+            alerta = ("la suma es "+suma+" y supero los 10");
+        }
     }
 
     alert (alerta);
 }
+    

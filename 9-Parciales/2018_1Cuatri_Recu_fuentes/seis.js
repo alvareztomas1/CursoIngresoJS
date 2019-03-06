@@ -1,6 +1,77 @@
 function mostrar()
 {
-    var tipoPago;
+   var nota;
+
+   nota = document.getElementById("laHora").value;
+   nota = parseInt (nota);
+
+   switch (nota)
+   {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+            alerta = ("la proxima se puede");
+            break;
+        case 4:
+        case 5:
+        case 6:
+            alerta = ("pasa raspando");
+            if (nota<5)
+                {
+                    alert ("debes preocuparte mas")
+                }
+            break;
+        default:
+            alerta = ("aprobo")
+            if (nota>10)
+            {
+                alerta = ("ingrese una nota valida");
+            }
+            else
+            {
+                if (nota>8)
+                {
+                    alert  ("muy bien");
+                }
+                
+            }
+            break;
+
+   }
+   alert (alerta);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* var tipoPago;
     var precio;
     var tipo;
     var paquete;
@@ -57,4 +128,4 @@ function mostrar()
     }
     resultado=(precio-(precio*desc));
     alert ("su precio es "+resultado);
-}
+    */

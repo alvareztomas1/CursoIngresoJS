@@ -1,19 +1,25 @@
 function mostrar()
 {
-    var precioFinal,propina,resultado,chicos;
-    
-    chicos = prompt ("cuantos chicos son")
-    precioFinal = document.getElementById("elPrecioFinal").value;
-    precioFinal = parseInt (precioFinal);
+    var precio;
+    var descuento;
+    var descuento1;
+    var descuento2;
+    var descuento3;
+    var iva;
+    var precioFinal;
 
-    propina = ((precioFinal*10)/100);
-    propina = parseInt (propina);
-    
-    precio = (precioFinal+propina);
+    precio = prompt ("Ingrese el precio");
     precio = parseInt (precio);
+    descuento = prompt ("Ingrese el descuento");
+    descuento = parseInt (descuento);
 
-    resultado = ((precioFinal+propina)/chicos);
+    descuento1 = ((descuento*precio)/100);
+    descuento2 = (precio-(descuento*precio)/100);
+    iva = ((21*precio)/100);
+    descuento3 = (descuento2-iva);
     
 
-    alert ("el precio es de "+precioFinal+"$ "+" mas la propina que son "+propina+"$"+" el precio seria "+precio+"$ "+" cada uno tiene que poner "+resultado+" pesos");
+    alert ("el precio del descuento es "+descuento1+" el precio con descuento es "+descuento2)+" el iva es del 21%";
+
+    document.getElementById("elPrecioFinal").value = descuento3;
 }

@@ -1,64 +1,39 @@
-function mostrar() {
-    var libros, precio, tarjeta, resultado, resultado1, resultado2, resultado3, resultado4, resultado5, resultado6, resultado7;
-    libros = prompt("cuantos libros va a comprar");
-    precio = prompt("cual es el total");
-    tarjeta = prompt("paga con tarjeta?");
-    if (libros > 2 && tarjeta == "no" && precio > 2000) {
-        resultado = (precio - (precio * 25) / 100);
-        alert("su precio es " + resultado);
+function mostrar() 
+{
+    var dato;
+    var dato1;
+    var division;
+    var suma;
+
+    dato = prompt ("ingrese el primer numero");
+    dato = parseInt (dato);
+    dato1 = prompt ("ingrese el segundo numero");
+    dato1 = parseInt (dato1);
+
+    division=(dato/dato1);
+    suma=(dato+dato1)
+
+    if (dato==dato1)
+    {
+        alerta = ("los numeros son "+dato+" , "+dato1);
     }
-
-    if (libros > 2 && tarjeta == "si" && precio > 2000) {
-        resultado1 = (precio - (precio * 15) / 100);
-        alert("su precio es " + resultado1);
+    else
+    {
+        if (dato>dato1)
+        {
+            alerta = ("la division es "+division);
+        }
+        else
+        {
+            alerta = ("la suma es "+suma);
+            
+            if (suma<50)
+            {
+                alerta = ("la suma es "+suma+" y es menor a 50");
+            }
+        }  
     }
-    if (libros > 2 && tarjeta == "no" && precio < 2000) {
-        resultado2 = (precio - (precio * 10) / 100)
-        alert("su precio es " + resultado2);
-    }
-    if (libros > 2 && tarjeta == "si" && precio < 2000) {
-
-        alert("tu precio es " + precio)
-    }
-
-
-
-    if (libros < 2 && tarjeta == "no" && precio > 2000) {
-        resultado4 = (precio - (precio * 25) / 100);
-        alert("su precio es " + resultado4);
-    }
-
-    if (libros < 2 && tarjeta == "si" && precio > 2000) {
-        resultado5 = (precio - (precio * 15) / 100);
-        alert("su precio es " + resultado5);
-    }
-    if (libros < 2 && tarjeta == "no" && precio < 2000) {
-        resultado6 = (precio - (precio * 10) / 100)
-        alert("su precio es " + resultado6);
-    }
-    if (libros < 2 && tarjeta == "si" && precio < 2000) {
-        resultado7 = (precio - (precio * 15) / 100)
-        alert("tu precio es " + resultado7)
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    alert (alerta);
 
 }
 

@@ -4,6 +4,112 @@ function mostrar()
     var sexo;
     var edad;
     var contador;
+    var sumaNotas;
+    var notaBaja;
+    var sexoDeLaNota;
+    var contadorVarones;
+    var primerMujer;
+    var notaMujer;
+    var edadMujer;
+    var edadMinima;
+    var notaJoven;
+//-----------------------------------------------------------------------------------------------------------
+    sumaNotas = 0;
+    contador = 0;
+    notaBaja = 0;
+    contadorVarones = 0;
+    edadMinima=0;
+    primerMujer = "";
+    
+//-----------------------------------------------------------------------------------------------------------
+    while (contador<5)
+    {
+        nota = prompt ("ingrese la nota");
+        nota = parseInt (nota);
+        sexo = prompt ("ingrese m o f segun el sexo");
+        edad = prompt ("ingrese su edad");
+        edad = parseInt (edad);
+
+        if (nota>10 || nota<0)
+        {
+            alert ("las notas tienen que ser entre 0 y 10")
+        }
+        if (sexo !="m" && sexo !="f")
+        {
+            alert ("debe ingresar m o f ");
+        }
+        if (nota<notaBaja || contador==0)
+        {
+            notaBaja=nota;
+            sexoDeLaNota=sexo;
+        }
+        if (edad>18 && nota>=6 && sexo=="m")
+        {
+            contadorVarones++;
+        }
+        if (edad<edadMinima || contador==0)
+        {
+            edadMinima=edad;
+            notaJoven=nota;
+        }
+        if (primerMujer=="" && sexo=="f")
+        {
+            primerMujer=sexo;
+            notaMujer=nota;
+            edadMujer=edad;
+        }
+        sumaNotas = (sumaNotas+nota)
+        promedio = (sumaNotas/5)
+        contador++;
+    }
+//-----------------------------------------------------------------------------------------------------------   
+    if (sexo!="f")
+    {
+        alert ("no hubo ninguna mujer");
+    }
+    alert ("el promedio de notas es "+promedio);
+    alert ("la nota mas baja fue "+notaBaja+" y el sexo de la persona es "+sexoDeLaNota);
+    alert ("la cantidad de varones mayores a 18 que sacaron igual o mas de 6 fueron: "+contadorVarones);
+    alert ("el mas joven tiene "+edadMinima+" años"+" y se saco "+notaJoven);
+    alert ("la edad de la primer mujer es "+edadMujer+" y su nota es "+notaMujer);
+//-----------------------------------------------------------------------------------------------------------    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+var nota;
+    var sexo;
+    var edad;
+    var contador;
     var sumaNota;
     var promedio;
     var notaMinima;
@@ -55,7 +161,7 @@ function mostrar()
             notaPrimera=nota;
         }
         
-
+        
 
 
 
@@ -73,10 +179,7 @@ function mostrar()
     alert ("la nota mas baja fue "+notaMinima+" y el sexo es "+sexoDeLaNota);
     alert ("la nota del mas joven fue "+notaJoven+" y su sexo es "+sexoJoven);
     alert ("la primer mujer se saco "+notaPrimera+" y tiene "+edadPrimera+" años");
-}
-
-
-
+*/
 
 
 

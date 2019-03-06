@@ -1,6 +1,113 @@
 function mostrar()
 {
-    var nombre;
+   var libro;
+   var paginas;
+   var tema;
+   var ventas;
+   var respuesta;
+   var contador;
+   var contadorPares;
+   var contadorImpares;
+   var contadorCeros;
+   var sumaVentas;
+   var promedio;
+   var sumaPaginas;
+//--------------------------------------------------------------------------------------------------------------------------------------
+   contador=0;
+   contadorPares=0;
+   contadorImpares=0;
+   contadorCeros=0;
+   sumaVentas=0;
+   sumaPaginas=0;
+//--------------------------------------------------------------------------------------------------------------------------------------   
+   while (respuesta!="no")
+   {
+    libro = prompt ("ingrese el nombre del libro");
+    paginas = prompt ("Ingrese la cantidad de paginas");
+    paginas = parseInt (paginas);
+    ventas = prompt ("ingrese la cantidad de ventas (deben ser mayores a 0)")
+    ventas = parseInt (ventas);
+    tema = prompt ("ingrese un tema");
+
+    if (ventas<0)
+    {
+        alert ("las ventas son mayores a 0")
+    }
+
+    if (paginas%2==0 && paginas !=0)
+    {
+        contadorPares++;
+    }
+    else
+    {
+        contadorImpares++;
+    }
+    if (ventas==0)
+    {
+        contadorCeros++;
+    }
+    if (tema=="programacion")
+    {
+        sumaPaginas=(sumaPaginas+paginas);
+    }
+        sumaVentas=(sumaVentas+ventas);
+        respuesta = prompt ("ingrese no para continuar");
+        contador++;
+   }
+//--------------------------------------------------------------------------------------------------------------------------------------
+   promedio=(sumaVentas/contador);
+   alert ("la cantidad de libros con paginas pares son: "+contadorPares+" y la cantidad de impares: "+contadorImpares);
+   alert ("la cantidad de libros con cero ventas fueron: "+contadorCeros);
+   alert ("el promedio de ventas fue "+promedio);
+   alert ("la suma de paginas con tema de programacion da "+sumaPaginas);
+//--------------------------------------------------------------------------------------------------------------------------------------   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+var nombre;
     var tema;
     var paginas;
     var ventas;
@@ -57,12 +164,7 @@ function mostrar()
     alert ("los libros que tuvieron cero ventas fueron: "+contadorCeros);
     alert ("el promedio de ventas fue "+promedio);
     alert ("los libros de programacion suman "+sumaProgramacion+" paginas");
-}
-
-
-
-
-
+*/
 
 
 
